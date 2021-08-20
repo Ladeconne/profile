@@ -1,0 +1,297 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: rgb(17, 17, 17);
+  font-family: "Montserrat", sans-serif;
+  overflow-x: hidden;
+  position: relative;
+}
+main {
+  position: absolute;
+}
+.nav-header {
+  min-height: 10vh;
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: auto;
+  padding: 1rem 0rem;
+  font-size: 2rem;
+  color: white;
+  position: relative;
+  z-index: 2;
+}
+
+#logo {
+  font-family: "Abril fatface", sans-serif;
+  color: white;
+}
+
+.burger {
+  cursor: pointer;
+}
+#line1,
+#line2 {
+  height: 0.2rem;
+  width: 3rem;
+  background: white;
+  margin: 0.4rem;
+  pointer-events: none;
+}
+
+.slide {
+  min-height: 100vh;
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto 0 auto;
+  color: white;
+  position: relative;
+}
+.wording-panel {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  padding-left: 5rem;
+  flex-basis: 25rem;
+  background: rgb(17, 17, 17);
+}
+
+.wording-panel h2 {
+  font-family: Abril fatface, sans serif;
+  font-size: 4rem;
+}
+
+#forest-span {
+  color: rgb(255, 177, 177);
+}
+
+#moutain-span {
+  color: rgb(86, 124, 228);
+}
+
+#fashion-span {
+  color: rgb(167, 110, 231);
+}
+.wording-panel p {
+  padding: 3rem 0;
+  font-size: 1.2rem;
+}
+
+.btn {
+  align-self: flex-start;
+  text-decoration: none;
+  padding: 1rem 2rem;
+  background: none;
+  color: white;
+  border: 1px solid white;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.img-panel {
+  flex: 1;
+  flex-basis: 25rem;
+  position: relative;
+  overflow: hidden;
+}
+.img-panel img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.nav-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  background: rgb(244, 244, 244);
+  opacity: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  clip-path: circle(50px at 100% -10%);
+  -webkit-clip-path: circle(50px at 100% -10%);
+}
+.nav-media-link {
+  font-size: 3rem;
+  flex-basis: 30rem;
+}
+.nav-media-link h3 {
+  padding: 3rem 0;
+}
+
+.nav-contact {
+  flex-basis: 30rem;
+}
+
+.nav-contact h3 {
+  font-size: 2rem;
+  padding: 2rem 0;
+}
+
+.nav-contact p {
+  flex-basis: 1.5rem;
+  line-height: 2rem;
+}
+
+.reveal-img,
+.reveal-text {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgb(17, 17, 17);
+  top: 0;
+  left: 0;
+}
+
+.cursor {
+  height: 3rem;
+  width: 3rem;
+  position: absolute;
+  border: 2px solid white;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.5s ease-in-out;
+  transition-property: background, transform;
+  transform-origin: 75% 75%;
+  pointer-events: none;
+}
+
+.scrollmagic-pin-spacer {
+  position: static !important;
+}
+
+.nav-over {
+  background: lightblue;
+  transform: scale(3);
+}
+
+.btn-over {
+  background: white;
+  transform: scale(3);
+}
+
+.cursor-text {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  font-size: 0.5rem;
+  transform: translate(-50%, -50%);
+}
+
+.title {
+  position: relative;
+  overflow: hidden;
+}
+.title-swipe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  mix-blend-mode: darken;
+  transform: translateY(100%);
+}
+.t-swipe1 {
+  background: rgb(255, 177, 177);
+}
+.t-swipe2 {
+  background: rgb(86, 124, 228);
+}
+.t-swipe3 {
+  background: rgb(167, 110, 231);
+}
+
+.hide {
+  overflow: hidden;
+}
+
+/* Other Pages */
+.fashion1,
+.fashion2,
+.fashion3 {
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 80%;
+  margin: auto;
+  color: white;
+  flex-wrap: wrap;
+  margin-top: 5rem;
+}
+
+.fashion-img {
+  height: 75vh;
+  flex-basis: 30rem;
+}
+
+.fashion-text {
+  flex: 1;
+  flex-basis: 25rem;
+  position: relative;
+}
+
+.fashion-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.fashion-text h1 {
+  font-size: 4rem;
+}
+
+.fashion1 h1 {
+  color: rgb(255, 177, 177);
+}
+.fashion2 h1 {
+  color: rgb(86, 124, 228);
+}
+.fashion3 h1 {
+  color: rgb(167, 110, 231);
+}
+.fashion-text p {
+  margin: 2rem 2rem 0rem 0rem;
+}
+.fashion-nr {
+  position: absolute;
+  font-size: 15rem;
+  top: 60%;
+  left: 35%;
+  opacity: 0.5;
+}
+
+.swipe {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  transform: translateX(-100%);
+}
+.swipe1 {
+  background: rgb(37, 92, 232);
+  z-index: 5;
+}
+.swipe2 {
+  background: rgb(37, 232, 99);
+  z-index: 4;
+}
+.swipe3 {
+  background: rgb(232, 37, 232);
+  z-index: 3;
+}
