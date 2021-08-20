@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beat Maker</title>
+    <link rel="stylesheet" href="assets/css/beatmaker.css">
+</head>
+<body>
+    <div class="sequencer">
+        <div class="kickpanel">
+            <div class="controls">
+                <h1>Kick</h1>
+                <button data-track="0" class="btn-mute kick-volume">
+                    <i class="fas fa-volume-mute"></i>
+                </button>
+                <select name="kick-choice" class="select kick-select">
+                    <option value="./assets/allSounds/kick-electro01.wav" class="instru-option">Kick Electro 1</option>
+                    <option value="./assets/allSounds/kick-electro02.wav" class="instru-option">Kick Electro 2</option>
+                    <option value="./assets/allSounds/kick-dry.wav" class="instru-option">Kick Dry</option>
+                </select>
+            </div>
+            <div class="kick">
+                <div class="pad kick-pad b0"></div>
+                <div class="pad kick-pad b1"></div>
+                <div class="pad kick-pad b2"></div>
+                <div class="pad kick-pad b3"></div>
+                <div class="pad kick-pad b4"></div>
+                <div class="pad kick-pad b5"></div>
+                <div class="pad kick-pad b6"></div>
+                <div class="pad kick-pad b7"></div>
+            </div>
+        </div>
+        <div class="snarepanel">
+            <div class="controls">
+                <h1>Snare</h1>
+                <button data-track="1" class="btn-mute snare-volume">
+                    <i class="fas fa-volume-mute"></i>
+                </button>
+                <select name="snare-choice" class="select snare-select">
+                    <option value="./assets/allSounds/snare-lofi01.wav" class="instru-option">Snare Lofi 1</option>
+                    <option value="./assets/allSounds/snare-lofi02.wav" class="instru-option">Snare Lofi 2</option>
+                    <option value="./assets/allSounds/snare-punch.wav" class="instru-option">Snare Punch</option>
+                </select>
+            </div>
+            <div class="snare">
+                <div class="pad snare-pad b0"></div>
+                <div class="pad snare-pad b1"></div>
+                <div class="pad snare-pad b2"></div>
+                <div class="pad snare-pad b3"></div>
+                <div class="pad snare-pad b4"></div>
+                <div class="pad snare-pad b5"></div>
+                <div class="pad snare-pad b6"></div>
+                <div class="pad snare-pad b7"></div>
+            </div>
+        </div>
+        <div class="hihatpanel">
+            <div class="controls">
+                <h1>Hihat</h1>
+                <button data-track="2" class="btn-mute hihat-volume">
+                    <i class="fas fa-volume-mute"></i>
+                </button>
+                <select name="hihat-choice" class="select hihat-select">
+                    <option value="./assets/allSounds/hihat-reso.wav" class="instru-option">Hihat Reso</option>
+                    <option value="./assets/allSounds/hihat-plain.wav" class="instru-option">Hihat Plain</option>
+                    <option value="./assets/allSounds/hihat-acoustic01.wav" class="instru-option">Hihat Acoustic 1</option>
+                </select>
+            </div>
+            <div class="hihat">
+                <div class="pad hihat-pad b0"></div>
+                <div class="pad hihat-pad b1"></div>
+                <div class="pad hihat-pad b2"></div>
+                <div class="pad hihat-pad b3"></div>
+                <div class="pad hihat-pad b4"></div>
+                <div class="pad hihat-pad b5"></div>
+                <div class="pad hihat-pad b6"></div>
+                <div class="pad hihat-pad b7"></div>
+            </div>
+        </div>
+        <div class="play">
+            <button value="play" class="btn-play">Play</button>
+        </div>
+        <div class="slider-pan">
+            <input type="range" class="bpm-slider" min=50 max=300 value=150/>
+            <p>Tempo: <span class="nr-bpm">150</span></p>
+        </div>
+    </div>
+
+    <audio class="kick-sound" src="./assets/allSounds/kick-electro01.wav"></audio>
+
+    <audio class="snare-sound" src="./assets/allSounds/snare-lofi01.wav"></audio>
+
+    <audio class="hihat-sound" src="./assets/allSounds/hihat-reso.wav"></audio>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/js/all.min.js" integrity="sha512-F5QTlBqZlvuBEs9LQPqc1iZv2UMxcVXezbHzomzS6Df4MZMClge/8+gXrKw2fl5ysdk4rWjR0vKS7NNkfymaBQ==" crossorigin="anonymous"></script>
+    <script src="assets/js/beatmaker.js"></script>
+</body>
+</html>

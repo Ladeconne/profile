@@ -1,0 +1,142 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+.sequencer {
+  height: 100vh;
+}
+
+.slider-pan {
+  margin: 3rem auto;
+  width: 30%;
+  text-align: center;
+}
+.bpm-slider {
+  padding: 0.2rem;
+  -webkit-appearance: none;
+  width: 100%;
+  position: relative;
+  background: rgb(158, 157, 157);
+  cursor: pointer;
+  border-radius: 1rem;
+}
+
+.slider-pan p {
+  margin: 1rem;
+}
+
+.kickpanel,
+.snarepanel,
+.hihatpanel {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 3rem;
+}
+
+.kick,
+.snare,
+.hihat {
+  display: flex;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+  width: 30%;
+}
+
+.controls h1 {
+  padding: 0.5rem;
+  color: rgb(129, 129, 117);
+}
+.pad {
+  margin: 1rem;
+  height: 5rem;
+  width: 5rem;
+  border-radius: 50%;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.active {
+  filter: saturate(10);
+}
+
+.kick-pad {
+  background-color: rgb(48, 111, 148);
+}
+.snare-pad {
+  background-color: rgb(177, 192, 45);
+}
+.hihat-pad {
+  background-color: rgb(129, 38, 38);
+}
+.kick-pad:hover {
+  background-color: rgb(11, 94, 143);
+}
+.snare-pad:hover {
+  background-color: rgba(197, 218, 12, 0.815);
+}
+.hihat-pad:hover {
+  background-color: rgb(134, 17, 17);
+}
+
+.select {
+  padding: 1rem;
+  font-size: large;
+  cursor: pointer;
+}
+
+.kick-select {
+  color: rgb(78, 179, 238);
+  border-color: rgb(78, 179, 238);
+}
+.snare-select {
+  color: rgb(111, 121, 28);
+  border-color: rgb(111, 121, 28);
+}
+.hihat-select {
+  color: rgb(209, 64, 64);
+  border-color: rgb(209, 64, 64);
+}
+
+.btn-mute {
+  padding: 1rem;
+  background-color: rgb(44, 43, 39);
+  color: beige;
+  border-style: groove;
+  cursor: pointer;
+}
+
+.mute-active {
+  background-color: rgb(179, 174, 157);
+}
+
+.fa-volume-mute {
+  pointer-events: none;
+}
+.play {
+  display: flex;
+  justify-content: center;
+  margin-top: 10vh;
+}
+.btn-play {
+  padding: 1rem;
+  background-color: rgb(140, 137, 116);
+  color: beige;
+  border-style: groove;
+  cursor: pointer;
+}
+
+@keyframes playTrack {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.2);
+  }
+}
