@@ -1,0 +1,242 @@
+* {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  outline: none;
+  box-sizing: border-box;
+}
+i,
+svg,
+path {
+  pointer-events: none;
+}
+body {
+  height: 100vh;
+}
+
+.colors {
+  display: flex;
+  height: 80vh;
+}
+.color {
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  align-items: center;
+  justify-content: space-evenly;
+  position: relative;
+  overflow: hidden;
+}
+.color h2 {
+  cursor: pointer;
+  color: rgba(0, 0, 0, 0.794);
+}
+.color-controls button {
+  display: flex;
+  flex-direction: column;
+  background: none;
+  border: none;
+  font-size: 1.3rem;
+  padding: 0.5rem;
+  margin: 1rem;
+  cursor: pointer;
+}
+.sliders {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  bottom: 0%;
+  padding: 1rem;
+  width: 80%;
+  opacity: 0;
+  transform: translateY(100px);
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.sliders.active {
+  opacity: 1;
+  transform: translateY(0px);
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 20vh;
+  text-align: center;
+}
+
+.controls button {
+  padding: 0.5rem 1rem;
+  margin: 1rem;
+  font-size: 1.3rem;
+  border: none;
+  border-radius: 0.5rem;
+  background-color: rgb(219, 144, 51);
+  color: white;
+  cursor: pointer;
+}
+
+.controls p {
+  font-size: 0.9rem;
+}
+.lib-container,
+.save-container,
+.refresh-container {
+  display: flex;
+  flex-direction: column;
+}
+
+input[type="range"] {
+  -webkit-appearance: none;
+
+  border-radius: 1rem;
+}
+
+.copy-panel,
+.save-panel,
+.lib-panel {
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.7s ease-in-out;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.copy-popup,
+.save-popup,
+.lib-popup {
+  padding: 2rem;
+  background: white;
+  border-radius: 1rem;
+  min-width: 30%;
+  min-height: 30vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  transition: all 0.7s ease-in-out;
+  transform: translateY(-2rem);
+  font-size: 1.4rem;
+  opacity: 0;
+}
+.copy-panel.active,
+.save-panel.active,
+.lib-panel.active {
+  opacity: 1;
+  pointer-events: all;
+}
+.copy-popup.active,
+.save-popup.active,
+.lib-popup.active {
+  opacity: 1;
+  transform: translateY(2rem);
+}
+
+.lib-popup {
+  justify-content: flex-start;
+  overflow-y: scroll;
+  max-height: 40vh;
+}
+
+.save-input {
+  padding: 0.7rem;
+  border-radius: 0.5rem;
+  font-size: 1.3rem;
+}
+
+.save-submit {
+  padding: 1rem;
+  border: none;
+  border-radius: 1rem;
+  background-color: teal;
+  color: white;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  transition: all 0.3s ease-in-out;
+  min-width: 7rem;
+}
+
+.save-submit:hover {
+  background-color: rgb(1, 157, 157);
+}
+
+.palette-panel {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.palette-title {
+  margin-left: 2rem;
+}
+.colors-preview {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  min-height: 1rem;
+  margin: 1rem;
+}
+
+.color-block {
+  padding: 1rem 0.7rem;
+}
+
+.color-select,
+.clear-lib {
+  padding: 0.5rem;
+  cursor: pointer;
+  background-color: teal;
+  color: white;
+  border: none;
+  margin-left: 1rem;
+  border-radius: 0.5rem;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+}
+
+.color-select:hover,
+.clear-lib:hover {
+  background-color: rgb(1, 157, 157);
+}
+
+.close-sliders,
+.close-popup {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  padding: 0.3rem;
+  border-top-right-radius: 1rem;
+  border-bottom-left-radius: 0.5rem;
+  border: none;
+  background-color: teal;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.close-sliders:hover {
+  background-color: rgb(1, 157, 157);
+}
+.close-popup:hover {
+  background-color: rgb(1, 157, 157);
+}
+
+.clear-lib {
+  margin: 1rem;
+}
