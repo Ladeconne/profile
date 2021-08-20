@@ -1,0 +1,127 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+  color: white;
+  font-family: Poppins, sans-serif;
+  min-height: 100vh;
+}
+
+header h1 {
+  font-size: 4rem;
+}
+header,
+form {
+  min-height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+form input,
+form button {
+  background-color: white;
+  color: #fda085;
+  border: none;
+  padding: 0.7em 1.3em;
+  outline: none;
+}
+
+form button {
+  cursor: pointer;
+}
+ul {
+  min-width: 30%;
+  list-style: none;
+}
+
+.todoItem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.todo {
+  background-color: white;
+  color: #fda085;
+  font-size: 1.5rem;
+  padding: 0.5rem;
+  text-align: left;
+  min-width: 10rem;
+  border-radius: 2px 0px 0px 2px;
+  border: none;
+}
+
+.todoDel {
+  font-size: 1.9rem;
+  padding: 0.5rem;
+  background: #fda085;
+  color: white;
+  border: none;
+  border-radius: 0px 2px 2px 0px;
+  cursor: pointer;
+  outline: none;
+}
+.todoVal {
+  font-size: 1.9rem;
+  padding: 0.5rem;
+  background: green;
+  color: white;
+  border: none;
+  border-radius: 0px 2px 2px 0px;
+  cursor: pointer;
+  outline: none;
+}
+.fa-recycle,
+.fa-check-double {
+  pointer-events: none;
+}
+
+.completed {
+  text-decoration: line-through;
+  color: black;
+  opacity: 50%;
+  transition: all 0.5s ease;
+}
+
+.select {
+  position: relative;
+  background-color: white;
+  padding: 0.25rem;
+  margin-left: 1rem;
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border: none;
+  appearance: none;
+  box-shadow: none;
+  outline: none;
+  color: #fda085;
+  cursor: pointer;
+  min-width: 10rem;
+}
+
+.select:after {
+  position: absolute;
+  background-color: #fda085;
+  color: white;
+  content: "\21a7";
+  padding: 0.25rem;
+  right: 0px;
+  top: 0px;
+  pointer-events: none;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.select:hover:after {
+  background-color: white;
+  color: #fda085;
+}
