@@ -101,8 +101,8 @@ function randomColor(){
             initialColors.push(colorDivHex.innerText);
             return
         }
-       
-        
+
+
         //Je récupère les controls boutton de chaque div
         const divControls = div.querySelectorAll(".color-controls button");
 
@@ -121,12 +121,12 @@ function randomColor(){
         const hue = sliders[0];
         const brightness = sliders[1];
         const saturation = sliders[2];
-        
+
         //Initializing ranges sliders
         initializeSliders(newColor, hue, brightness, saturation)
 
     })
-    
+
 }
 
 function checkTextContrast(text, color){
@@ -134,7 +134,7 @@ function checkTextContrast(text, color){
     if(colorLum < 0.5){
         text.style.color = 'rgba(255, 255, 255, 0.874)';
     }else{
-        text.style.color = 'rgba(0, 0, 0, 0.794)';
+        text.style.color = 'rgba(85, 85, 85)';
     }
 }
 
@@ -142,13 +142,13 @@ function initializeSliders(newColor, hue, brightness, saturation){
     hue.value = newColor.hsl()[0];
     saturation.value = newColor.hsl()[1];
     brightness.value = newColor.hsl()[2];
-    
+
     //Brightness
     const startBri = chroma(newColor).set("hsl.l", 0);
     const endBri = chroma(newColor).set("hsl.l", 1);
     const scaleBri = chroma.scale([startBri,newColor, endBri])
     brightness.style.background = `linear-gradient(to right, ${scaleBri(0)},${scaleBri(0.5)},${scaleBri(1)})`
-    
+
     //Saturation
     const startSat = chroma(newColor).set("hsl.s", 0);
     const endSat = chroma(newColor).set("hsl.s", 1);
@@ -169,7 +169,7 @@ function updateBackground(e){
 
     //Je récupère la couleur du background initiale
     const color = initialColors[index];
-    
+
     switch(e.target.name){
         case "hue":
             colorDivs[index].style.background = chroma(color).set("hsl.h", newValue);
@@ -183,16 +183,16 @@ function updateBackground(e){
     }
 
     const updatedBgColor =colorDivs[index].style.background;
-   
+
     //Je change la valuer de Hex affiché dans le h2
     const hexText = colorDivs[index].querySelector("h2");
     hexText.innerText = chroma(updatedBgColor);
     // Je check le contrast du h2
     checkTextContrast(hexText ,updatedBgColor);
-    
+
     //Je récupère les bouttons dans le div concerné
     const divControls = colorDivs[index].querySelectorAll(".color-controls button")
-    //Je check le contrast pour tous les bouttons 
+    //Je check le contrast pour tous les bouttons
     divControls.forEach((control) => {
         checkTextContrast(control, updatedBgColor)
     })
@@ -200,9 +200,9 @@ function updateBackground(e){
     const hue = sliders[0];
     const brightness = sliders[1];
     const saturation = sliders[2];
-    
+
     initializeSliders(chroma(updatedBgColor), hue, brightness, saturation);
-    
+
     initialColors[index] = chroma(updatedBgColor).hex();
 }
 function refreshColors(){
@@ -340,13 +340,13 @@ function addToLib(paletteObj){
                 const hue = sliders[0];
                 const brightness = sliders[1];
                 const saturation = sliders[2];
-    
+
                 initializeSliders(chroma(color), hue, brightness, saturation);
-                
+
             })
 
         })
-    
+
 
         //On attache tout ça à element existant :)
         libPanel.children[0].appendChild(palettePanel);
